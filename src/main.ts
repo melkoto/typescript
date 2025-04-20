@@ -1,5 +1,5 @@
 import './style.css'
-import { main } from "./index.ts";
+import { main } from './index.ts'
 import typescriptLogo from './typescript.svg'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
