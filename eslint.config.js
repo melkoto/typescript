@@ -9,7 +9,7 @@ const textFiles = ['**/*.{css,md,json}']
 const __dirname = new URL('.', import.meta.url).pathname
 
 export default tseslint.config(
-  /* 0. ignore */
+  /* 0. Ignore */
   { ignores: ['dist/**', 'node_modules/**', 'eslint.config.js'] },
 
   /* 1. JavaScript */
@@ -19,10 +19,10 @@ export default tseslint.config(
     languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
 
-  /* 2. Type‑checked TypeScript — разворачиваем массив */
+  /* 2. TypeScript */
   ...tseslint.configs.recommendedTypeChecked,
 
-  /* 3. Наши доп‑правила для TS */
+  /* 3. Доп правила для TS */
   {
     files: tsFiles,
     languageOptions: {
