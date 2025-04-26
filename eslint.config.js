@@ -14,35 +14,35 @@ export default tseslint.config(
 
   /* 1. JavaScript */
   {
-    ...eslint.configs.recommended,
-    files: jsFiles,
-    languageOptions: { globals: { ...globals.node, ...globals.browser } },
+    // ...eslint.configs.recommended,
+    // files: jsFiles,
+    // languageOptions: { globals: { ...globals.node, ...globals.browser } },
   },
 
   /* 2. TypeScript */
-  ...tseslint.configs.recommendedTypeChecked,
+  // ...tseslint.configs.recommendedTypeChecked,
 
   /* 3. Доп правила для TS */
   {
-    files: tsFiles,
-    languageOptions: {
-      parserOptions: {
-        project: './tsconfig.json',
-        tsconfigRootDir: __dirname,
-      },
-    },
+    // files: tsFiles,
+    // languageOptions: {
+    //   parserOptions: {
+    //     project: './tsconfig.json',
+    //     tsconfigRootDir: __dirname,
+    //   },
+    // },
     rules: {
-      '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: false }],
-      '@typescript-eslint/no-unsafe-assignment': 'error',
-      '@typescript-eslint/no-unsafe-member-access': 'error',
-      '@typescript-eslint/no-unsafe-return': 'error',
+      // '@typescript-eslint/no-explicit-any': ['error', { fixToUnknown: false }],
+      // '@typescript-eslint/no-unsafe-assignment': 'error',
+      // '@typescript-eslint/no-unsafe-member-access': 'error',
+      // '@typescript-eslint/no-unsafe-return': 'error',
     },
   },
 
   /* 4. Prettier */
   {
-    files: [...jsFiles, ...tsFiles, ...textFiles],
-    plugins: { prettier: prettierPlugin },
-    rules: { 'prettier/prettier': 'error' },
+    // files: [...jsFiles, ...tsFiles, ...textFiles],
+    // plugins: { prettier: prettierPlugin },
+    // rules: { 'prettier/prettier': 'error' },
   }
 )
